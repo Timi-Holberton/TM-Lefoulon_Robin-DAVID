@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voyage en Terre du Milieu - Site interactif de l'univers du Seigneur des Anneaux avec carte interactive PostGIS. Portfolio Project Holberton School Laval.">
+    <title>Voyage en Terre du Milieu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Voyage en Terre du Milieu</div>
+            <ul class="nav-links">
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#demo">Démo</a></li>
+                <li><a href="https://votre-app-deployee.com" target="_blank" class="btn-launch">Lancer l'App</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SECTION 0: INTRO (Hero avec grande image) -->
+    <section class="hero" id="intro">
+        <!-- Grande Image de Couverture -->
+        <div class="hero-cover">
+            <!-- TODO: Remplace par ton image de couverture -->
+            <div class="cover-placeholder">
+                <div class="cover-ring">⚔</div>
+                <div class="cover-text">Terre du Milieu</div>
+            </div>
+            <!-- Pour utiliser une vraie image, décommente et remplace :
+            <img src="images/middle-earth-cover.jpg" alt="Carte de la Terre du Milieu">
+            -->
+            <div class="cover-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+            <!-- Nom du Projet -->
+            <h1 class="project-title">
+                Voyage en Terre du Milieu
+            </h1>
+
+            <!-- Description One-Line -->
+            <p class="project-subtitle">
+                Un site interactif avec carte explorable de l'univers de J.R.R. Tolkien
+            </p>
+
+            <!-- Bouton vers Application Déployée -->
+            <div class="hero-buttons">
+                <a href="https://votre-app-deployee.com" target="_blank" class="btn btn-primary btn-deploy">
+                    Découvrir l'Application
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <span>Scroll ↓</span>
+        </div>
+    </section>
+
+    <!-- SECTION 1: FEATURES (3 Fonctionnalités Clés) -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Fonctionnalités Principales</h2>
+            <p class="section-desc">Trois innovations majeures au cœur du projet</p>
+
+            <!-- Feature 1: Carte Interactive -->
+            <div class="feature-item">
+                <div class="feature-media">
+                    <div class="media-placeholder">
+                        <img src="images/image1.png" alt="Carte interactive">
+                        <p class="placeholder-note">Carte Interactive PostGIS</p>
+                    </div>
+                </div>
+                <div class="feature-details">
+                    <h3 class="feature-name">Carte Interactive avec PostGIS</h3>
+                    <p class="feature-description">
+                        Explorez la Terre du Milieu grâce à une carte interactive développée avec <strong>Leaflet.js</strong> et
+                        <strong>PostGIS</strong>. Cette fonctionnalité utilise un système de coordonnées personnalisé pour adapter
+                        l'imagerie non-géographique de Tolkien à une carte navigable.
+                    </p>
+                    <p class="feature-description">
+                        Naviguez entre les régions et villes avec affichage des points d'intérêt via marqueurs. Cliquez pour
+                        découvrir les lieux emblématiques : la Comté, Fondcombe, le Mordor, avec descriptions détaillées et
+                        références aux œuvres originales.
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-badge">Leaflet.js</span>
+                        <span class="tech-badge">PostGIS</span>
+                        <span class="tech-badge">Polygones Géospatiaux</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Authentification JWT -->
+            <div class="feature-item reverse">
+                <div class="feature-media">
+                    <!-- TODO: Remplace par screenshot/GIF du système d'auth -->
+                    <div class="media-placeholder">
+                        <img src="images/login.png" alt="Connexion et enregistrement">
+                        <p class="placeholder-note">Système d'Authentification</p>
+                    </div>
+                </div>
+                <div class="feature-details">
+                    <h3 class="feature-name">Authentification Sécurisée JWT</h3>
+                    <p class="feature-description">
+                        Un système d'authentification robuste basé sur <strong>JSON Web Tokens (JWT)</strong> avec gestion
+                        des rôles utilisateurs. Les utilisateurs peuvent s'inscrire et se connecter en toute sécurité.
+                    </p>
+                    <p class="feature-description">
+                        Les mots de passe sont sécurisés par hachage et l'application implémente un contrôle d'accès pour
+                        protéger les fonctionnalités sensibles. Session persistante et gestion automatique des tokens.
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-badge">JWT</span>
+                        <span class="tech-badge">Bcrypt</span>
+                        <span class="tech-badge">Sessions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Galerie Artistique -->
+            <div class="feature-item">
+                <div class="feature-media">
+                    <!-- TODO: Remplace par screenshot/GIF de la galerie -->
+                    <div class="media-placeholder">
+                        <img src="images/gallery.png" alt="Gallery d'art">
+                        <img src="images/image-detail.png" alt="détail une création d'art">
+                        <p class="placeholder-note">Galerie Communautaire</p>
+                    </div>
+                </div>
+                <div class="feature-details">
+                    <h3 class="feature-name">Galerie Artistique Communautaire</h3>
+                    <p class="feature-description">
+                        Partagez vos créations artistiques inspirées de la Terre du Milieu dans une galerie collaborative.
+                        Les utilisateurs authentifiés peuvent <strong>uploader des images</strong> avec un système de commentaires.
+                    </p>
+                    <p class="feature-description">
+                        L'interface responsive s'adapte à tous les appareils. Le système inclut des contrôles de validation
+                        et une interface intuitive pour consulter et partager des créations liées à l'univers du SDA.
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-badge">Upload Fichiers</span>
+                        <span class="tech-badge">Responsive</span>
+                        <span class="tech-badge">UX Optimisée</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT (Histoire Personnelle) -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">À Propos du Projet</h2>
+
+            <div class="about-grid">
+                <!-- Histoire Personnelle -->
+                <div class="about-story">
+                    <div class="story-block">
+                        <h3>🌟 L'Inspiration</h3>
+                        <p>
+                            Au départ, nous avions plusieurs idées : créer un wiki dédié à un univers fantastique, un forum de
+                            créations artistiques, un site vitrine pour présenter des œuvres, ou encore une carte interactive
+                            des mondes imaginaires.
+                        </p>
+                        <p>
+                            Finalement, nous avons choisi de réunir ces concepts autour de l’univers de Tolkien, que nous apprécions tous deux, afin de concevoir notre MVP articulé autour de quatre fonctionnalités principales : <br/>
+                            • Une carte interactive de la Terre du Milieu <br/>
+                            • Des pages informatives sur les races, les personnages et les grands événements <br/>
+                            • Une galerie d’art mettant en valeur les créations de la communauté <br/>
+                            • Un espace communautaire dédié à chaque création artistique <br/>
+                        </p>
+                        <p>
+                            Notre objectif principal était de créer une expérience immersive, alliant information, exploration et créativité.
+                        </p>
+                    </div>
+
+                    <div class="story-block">
+                        <h3>🎯 Le Défi Technique</h3>
+                        <p>
+                            Ce projet représentait un défi technique majeur : adapter des technologies géospatiales conçues
+                            pour cartographier notre monde réel à une carte fictive. J'ai dû apprendre simultanément
+                            <strong>PostGIS</strong>, <strong>React</strong> et <strong>Leaflet</strong>, tout en
+                            comprenant comment convertir un système de coordonnées non-géographique en coordonnées exploitable.
+                        </p>
+                        <p>
+                            Le processus de développement s'est déroulé méthodiquement :
+                        </p>
+                        <ol class="dev-process">
+                            <li>Les trois premières ont servi à la conception, à la documentation technique et à l’apprentissage de React.</li>
+                            <li>Les semaines 4 et 5 ont été consacrées à la mise en place de la base de données avec PostGIS, à la création des modèles, API, façades et tests.</li>
+                            <li>Les semaines 6 à 8, coté Frontend, ont permis de développer la carte interactive, l’encyclopédie, la galerie d’art et les commentaires, tout en définissant le style et le responsive design.</li>
+                            <li>Enfin, les dernières semaines ont été dédiées à la finalisation du CSS, à l’adaptation multiplateforme et à la rédaction de la documentation finale.</li>
+                        </ol>
+                    </div>
+
+                    <div class="story-block holberton-block">
+                        <h3>📚 Portfolio Project - Holberton School</h3>
+                        <p>
+                            Ce projet a été développé dans le cadre du programme <strong>Développeur Web & Web Mobile</strong> de
+                            <a href="https://www.holbertonschool.com" target="_blank" rel="noopener">Holberton School Laval</a>.
+                            Il représente l'aboutissement de notre parcours d'apprentissage des fondamentaux du développement
+                            et démontre notre maîtrise des technologies modernes.
+                        </p>
+                        <p>
+                            <strong>Timeline :</strong> 10 semaines intensives de développement<br>
+                            <strong>Résultat :</strong> Application full-stack fonctionnelle<br>
+                            <strong>MVP :</strong> 90% des objectifs atteints
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member (Toi) -->
+                <div class="team-sidebar">
+                    <div class="team-card">
+                        <h3>Développeur</h3>
+
+                        <div class="developer-info">
+                            <div class="dev-avatar">
+                                <!-- TODO: Ajoute ta photo -->
+                                <div class="avatar-placeholder">T</div>
+                                <!-- <img src="images/timi-photo.jpg" alt="Timi"> -->
+                            </div>
+
+                            <h4>Timi</h4>
+                            <p class="dev-title">Full-Stack Developer</p>
+                            <p class="dev-school">Holberton School Laval</p>
+
+                            <!-- Liens Sociaux (OBLIGATOIRE) -->
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" class="social-btn linkedin">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                    LinkedIn
+                                </a>
+
+                                <a href="https://github.com/VOTRE-USERNAME" target="_blank" rel="noopener" class="social-btn github">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+
+                                <a href="https://twitter.com/VOTRE-USERNAME" target="_blank" rel="noopener" class="social-btn twitter">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                    Twitter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lien GitHub Repository (OBLIGATOIRE) -->
+                    <div class="repo-card">
+                        <h4>📦 Code Source</h4>
+                        <a href="https://github.com/VOTRE-USERNAME/voyage-terre-du-milieu" target="_blank" rel="noopener" class="repo-link">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                            <div class="repo-info">
+                                <strong>GitHub Repository</strong>
+                                <span>Code complet du projet</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Stack Technique -->
+                    <div class="tech-stack-card">
+                        <h4>🛠️ Stack Technique</h4>
+                        <div class="stack-group">
+                            <strong>Frontend</strong>
+                            <div class="stack-tags">
+                                <span>React</span>
+                                <span>Vite</span>
+                                <span>Leaflet.js</span>
+                            </div>
+                        </div>
+                        <div class="stack-group">
+                            <strong>Backend</strong>
+                            <div class="stack-tags">
+                                <span>Flask</span>
+                                <span>Python</span>
+                                <span>JWT</span>
+                            </div>
+                        </div>
+                        <div class="stack-group">
+                            <strong>Database</strong>
+                            <div class="stack-tags">
+                                <span>PostgreSQL</span>
+                                <span>PostGIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: DEMO (Vidéo YouTube) -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2 class="section-title">Démonstration</h2>
+
+            <!-- Vidéo YouTube (OBLIGATOIRE) -->
+            <div class="demo-video">
+                <h3>🎬 Vidéo de Démonstration</h3>
+
+                <!-- TODO: Remplace par ta vidéo YouTube -->
+                <div class="youtube-placeholder">
+                    <div class="placeholder-icon">▶️</div>
+                    <p>Vidéo YouTube de démonstration</p>
+                    <p class="youtube-instructions">
+                        Pour ajouter ta vidéo :<br>
+                        1. Upload ta vidéo sur YouTube<br>
+                        2. Copie l'ID de la vidéo (après watch?v=)<br>
+                        3. Remplace VOTRE_VIDEO_ID ci-dessous
+                    </p>
+                    <code>&lt;iframe src="https://www.youtube.com/embed/VOTRE_VIDEO_ID"&gt;&lt;/iframe&gt;</code>
+                </div>
+
+                <!-- Décommente et remplace par ton ID YouTube :
+                <div class="youtube-embed">
+                    <iframe
+                        src="https://www.youtube.com/embed/VOTRE_VIDEO_ID"
+                        title="Voyage en Terre du Milieu - Demo"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                -->
+            </div>
+
+            <!-- Points Clés -->
+            <div class="demo-highlights">
+                <div class="highlight-box">
+                    <div class="highlight-icon">🗺️</div>
+                    <h4>Carte Interactive</h4>
+                    <p>Navigation fluide avec marqueurs PostGIS</p>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">🔐</div>
+                    <h4>Authentification</h4>
+                    <p>Système sécurisé JWT</p>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">🖼️</div>
+                    <h4>Galerie</h4>
+                    <p>Partage communautaire</p>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">📱</div>
+                    <h4>Responsive</h4>
+                    <p>Tous les appareils</p>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="demo-cta">
+                <a href="https://votre-app-deployee.com" target="_blank" class="btn btn-primary btn-large">
+                    🚀 Essayer l'Application
+                </a>
+                <a href="https://github.com/VOTRE-USERNAME/voyage-terre-du-milieu" target="_blank" class="btn btn-outline btn-large">
+                    Voir le Code Source
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Voyage en Terre du Milieu</h4>
+                    <p>Portfolio Project - Holberton School Laval</p>
+                    <p>Programme Full-Stack Development</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#features">Fonctionnalités</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                        <li><a href="#demo">Démo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens</h4>
+                    <ul>
+                        <li><a href="https://votre-app-deployee.com" target="_blank">Application</a></li>
+                        <li><a href="https://github.com/VOTRE-USERNAME" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.holbertonschool.com" target="_blank">Holberton School</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Timi - Holberton School Portfolio Project</p>
+                <p>L'univers du Seigneur des Anneaux appartient à Tolkien Estate. Projet éducatif.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
